@@ -1,0 +1,41 @@
+{
+  "name": "safe-gmail-mcp",
+  "version": "1.0.0",
+  "description": "Security-hardened Gmail MCP server - read, label, archive, draft only (no send/delete)",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "safe-gmail-mcp": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "init": "node src/cli/init.js",
+    "auth": "node src/index.js auth",
+    "status": "node src/cli/status.js"
+  },
+  "keywords": [
+    "gmail",
+    "mcp",
+    "safe",
+    "secure",
+    "read-only",
+    "model-context-protocol",
+    "claude"
+  ],
+  "author": "Fork of gongrzhe/server-gmail-autoauth-mcp (security-hardened)",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "google-auth-library": "^9.4.1",
+    "googleapis": "^129.0.0",
+    "mime-types": "^3.0.1",
+    "nodemailer": "^7.0.3",
+    "open": "^10.0.0",
+    "prompts": "^2.4.2",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.22.1"
+  }
+}
